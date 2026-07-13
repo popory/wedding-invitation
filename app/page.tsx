@@ -85,7 +85,6 @@ export default function Home() {
           <div><b>버스</b><p>301, 351, 472, 3011, 4412번 이용<br />영동고교 앞 하차 후 학동사거리 방향 약 100m</p></div>
           <div><b>주차</b><p>내부 200대·외부 300대, 총 500대 주차 가능<br />1시간 30분 무료 · 만차 시 현장 주차요원의 안내를 따라주세요.</p></div>
         </div>
-        <p className="transportNote">주말에는 주변 도로와 주차장이 혼잡할 수 있어 대중교통 이용을 권장드립니다. 셔틀과 주차 운영은 예식장 사정에 따라 달라질 수 있습니다.</p>
       </section>
 
       <section className="section account">

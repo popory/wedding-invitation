@@ -91,7 +91,6 @@ h1 span { margin: 0 8px; color: var(--rose); font-size: 20px; font-style: italic
 .transport div { padding: 17px 0; border-bottom: 1px solid var(--line); }
 .transport b { color: var(--sage); font-size: 13px; }
 .transport p { margin: 6px 0 0; color: var(--muted); font-size: 12px; }
-.transportNote { margin: 20px 0 0; padding: 14px; background: rgba(126,140,119,.08); color: var(--muted); font-size: 11px; line-height: 1.7; text-align: left; }
 .account details { margin-top: 10px; border: 1px solid var(--line); text-align: left; }
 .account summary { padding: 16px; cursor: pointer; font-size: 13px; list-style-position: inside; }
 .account details p { margin: 0; padding: 0 16px 16px; color: var(--muted); font-size: 12px; }
