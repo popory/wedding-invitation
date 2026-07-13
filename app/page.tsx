@@ -13,7 +13,7 @@ export default function Home() {
         </h1>
         <p className="heroDate">2026. 11. 01 · SUN · 1:00 PM</p>
         <div className="heroArt">
-          <img className="heroImage" src="photos/photo-4.jpg" alt="이세린과 이혜린의 모습" />
+          <img className="heroImage" src="photos/photo-3.jpg" alt="이세린과 이혜린의 모습" />
           <div className="heroPhotoCaption" aria-hidden="true">
             <span>OUR<br />WEDDING DAY</span>
           </div>
@@ -55,7 +55,7 @@ export default function Home() {
         <p className="sectionLabel">GALLERY</p>
         <h2>우리의 순간</h2>
         <div className="photoGrid">
-          {[1, 2, 3, 4].map(number => (
+          {[1, 2, 3, 4, 5].map(number => (
             <div key={number} className={`photo photo${number}`}>
               <img src={`photos/photo-${number}.jpg`} alt={`이세린과 이혜린의 추억 ${number}`} loading="lazy" />
             </div>
