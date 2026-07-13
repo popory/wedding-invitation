@@ -12,8 +12,9 @@ export default function Home() {
           이세린 <span>&amp;</span> 이혜린
         </h1>
         <p className="heroDate">2026. 11. 01 · SUN · 1:00 PM</p>
-        <div className="heroArt" role="img" aria-label="신랑 신부 사진이 들어갈 자리">
-          <div className="arch">
+        <div className="heroArt">
+          <img className="heroImage" src="photos/photo-4.jpg" alt="이세린과 이혜린의 모습" />
+          <div className="heroPhotoCaption" aria-hidden="true">
             <span>OUR<br />WEDDING DAY</span>
           </div>
         </div>
@@ -56,11 +57,11 @@ export default function Home() {
         <div className="photoGrid">
           {[1, 2, 3, 4].map(number => (
             <div key={number} className={`photo photo${number}`}>
-              <span>PHOTO {number}</span>
+              <img src={`photos/photo-${number}.jpg`} alt={`이세린과 이혜린의 추억 ${number}`} loading="lazy" />
             </div>
           ))}
         </div>
-        <p className="hint">사진은 추후 실제 웨딩 사진으로 교체됩니다.</p>
+        <p className="hint">함께한 소중한 순간들</p>
       </section>
 
       <section className="section location">
