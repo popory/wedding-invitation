@@ -1,3 +1,5 @@
+import { NaverMap } from "./NaverMap";
+
 const calendarDays = Array.from({ length: 30 }, (_, index) => index + 1);
 
 export default function Home() {
@@ -70,14 +72,7 @@ export default function Home() {
           <div><span>예식장</span><strong>6층 채플홀</strong></div>
           <div><span>피로연장</span><strong>5층 피로연장</strong></div>
         </div>
-        <div className="mapFrame">
-          <iframe
-            title="더채플앳 청담 상세 지도"
-            src="https://www.google.com/maps?q=%EB%8D%94%EC%B1%84%ED%94%8C%EC%95%B3%EC%B2%AD%EB%8B%B4&output=embed"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
+        <NaverMap />
         <div className="navigationButtons" aria-label="내비게이션 앱 선택">
           <a className="navButton naver" href="https://naver.me/5ne4oSX1" target="_blank" rel="noreferrer">네이버 지도</a>
           <a className="navButton kakao" href="https://map.kakao.com/link/search/%EB%8D%94%EC%B1%84%ED%94%8C%EC%95%B3%EC%B2%AD%EB%8B%B4" target="_blank" rel="noreferrer">카카오내비</a>
