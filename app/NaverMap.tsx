@@ -9,7 +9,7 @@ declare global {
 }
 
 const NAVER_MAP_CLIENT_ID = "06o9zzzecf";
-const VENUE_ADDRESS = "서울특별시 강남구 선릉로 757";
+const VENUE_POSITION = { latitude: 37.5222098, longitude: 127.038892 };
 
 export function NaverMap() {
   const mapElement = useRef<HTMLDivElement>(null);
@@ -19,35 +19,27 @@ export function NaverMap() {
     const initializeMap = () => {
       if (!mapElement.current || !window.naver?.maps) return;
 
-      window.naver.maps.Service.geocode(
-        { query: VENUE_ADDRESS },
-        (status: number, response: any) => {
-          if (status !== window.naver.maps.Service.Status.OK || !response.v2.addresses[0]) {
-            setFailed(true);
-            return;
-          }
-
-          const venue = response.v2.addresses[0];
-          const position = new window.naver.maps.LatLng(Number(venue.y), Number(venue.x));
-          const map = new window.naver.maps.Map(mapElement.current, {
-            center: position,
-            zoom: 17,
-            zoomControl: true,
-            zoomControlOptions: {
-              position: window.naver.maps.Position.TOP_RIGHT,
-            },
-          });
-
-          const marker = new window.naver.maps.Marker({ position, map });
-          const infoWindow = new window.naver.maps.InfoWindow({
-            content: '<div class="naverMapLabel"><strong>더채플앳 청담</strong><span>6층 채플홀</span></div>',
-          });
-          infoWindow.open(map, marker);
-        },
+      const position = new window.naver.maps.LatLng(
+        VENUE_POSITION.latitude,
+        VENUE_POSITION.longitude,
       );
+      const map = new window.naver.maps.Map(mapElement.current, {
+        center: position,
+        zoom: 17,
+        zoomControl: true,
+        zoomControlOptions: {
+          position: window.naver.maps.Position.TOP_RIGHT,
+        },
+      });
+
+      const marker = new window.naver.maps.Marker({ position, map });
+      const infoWindow = new window.naver.maps.InfoWindow({
+        content: '<div class="naverMapLabel"><strong>더채플앳 청담</strong><span>6층 채플홀</span></div>',
+      });
+      infoWindow.open(map, marker);
     };
 
-    if (window.naver?.maps?.Service) {
+    if (window.naver?.maps) {
       initializeMap();
       return;
     }
@@ -60,7 +52,7 @@ export function NaverMap() {
 
     const script = document.createElement("script");
     script.dataset.naverMap = "true";
-    script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${NAVER_MAP_CLIENT_ID}&submodules=geocoder`;
+    script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${NAVER_MAP_CLIENT_ID}`;
     script.async = true;
     script.addEventListener("load", initializeMap, { once: true });
     script.addEventListener("error", () => setFailed(true), { once: true });
