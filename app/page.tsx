@@ -70,19 +70,26 @@ export default function Home() {
           <div><span>예식장</span><strong>6층 채플홀</strong></div>
           <div><span>피로연장</span><strong>5층 피로연장</strong></div>
         </div>
-        <div className="mapPlaceholder">
-          <span className="pin">●</span>
-          <strong>더채플앳 청담</strong>
-          <small>서울 강남구 선릉로 757</small>
+        <div className="mapFrame">
+          <iframe
+            title="더채플앳 청담 상세 지도"
+            src="https://www.google.com/maps?q=%EB%8D%94%EC%B1%84%ED%94%8C%EC%95%B3%EC%B2%AD%EB%8B%B4&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
-        <a className="primaryButton" href="https://naver.me/5ne4oSX1" target="_blank" rel="noreferrer">
-          네이버 지도에서 보기
-        </a>
+        <div className="navigationButtons" aria-label="내비게이션 앱 선택">
+          <a className="navButton naver" href="https://naver.me/5ne4oSX1" target="_blank" rel="noreferrer">네이버 지도</a>
+          <a className="navButton kakao" href="https://map.kakao.com/link/search/%EB%8D%94%EC%B1%84%ED%94%8C%EC%95%B3%EC%B2%AD%EB%8B%B4" target="_blank" rel="noreferrer">카카오내비</a>
+          <a className="navButton tmap" href="tmap://search?name=%EB%8D%94%EC%B1%84%ED%94%8C%EC%95%B3%EC%B2%AD%EB%8B%B4">티맵</a>
+        </div>
         <div className="transport">
-          <div><b>지하철</b><p>7호선·수인분당선 강남구청역에서 이동하실 수 있습니다.</p></div>
-          <div><b>예식장</b><p>도착 후 6층 채플홀로 와주세요.</p></div>
-          <div><b>피로연장</b><p>예식 후 5층 피로연장을 이용해 주세요.</p></div>
+          <div><b>지하철</b><p>7호선·수인분당선 강남구청역 3-1번 출구에서 도보 약 7분</p></div>
+          <div><b>셔틀버스</b><p>예식 당일 강남구청역 3번 출구에서 약 10~15분 간격 운행</p></div>
+          <div><b>버스</b><p>301, 351, 472, 3011, 4412번 이용<br />영동고교 앞 하차 후 학동사거리 방향 약 100m</p></div>
+          <div><b>주차</b><p>내부 200대·외부 300대, 총 500대 주차 가능<br />1시간 30분 무료 · 만차 시 현장 주차요원의 안내를 따라주세요.</p></div>
         </div>
+        <p className="transportNote">주말에는 주변 도로와 주차장이 혼잡할 수 있어 대중교통 이용을 권장드립니다. 셔틀과 주차 운영은 예식장 사정에 따라 달라질 수 있습니다.</p>
       </section>
 
       <section className="section account">
