@@ -69,6 +69,11 @@ h1 span { margin: 0 8px; color: var(--rose); font-size: 20px; font-style: italic
 .location { background: var(--ivory); }
 .place { color: var(--muted); font-size: 13px; line-height: 1.8; }
 .place strong { color: var(--ink); font-size: 16px; font-weight: 500; }
+.venueInfo { margin: 26px 0 28px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.venueInfo div { display: grid; grid-template-columns: 72px 1fr; gap: 18px; padding: 14px 4px; border-bottom: 1px solid var(--line); text-align: left; }
+.venueInfo div:last-child { border-bottom: 0; }
+.venueInfo span { color: var(--sage); font-size: 12px; }
+.venueInfo strong { font-size: 13px; font-weight: 500; line-height: 1.65; }
 .mapPlaceholder { height: 210px; margin: 28px 0 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px; background: #e3dfd6; color: var(--sage); }
 .mapPlaceholder .pin { width: 30px; height: 30px; padding-top: 5px; border-radius: 50% 50% 50% 0; background: var(--sage); color: white; transform: rotate(-45deg); }
 .mapPlaceholder strong, .mapPlaceholder small { transform: none; color: #686b62; }

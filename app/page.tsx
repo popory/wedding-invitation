@@ -15,7 +15,7 @@ export default function Home() {
             <span>OUR<br />WEDDING DAY</span>
           </div>
         </div>
-        <p className="venue">더채플앳청담</p>
+        <p className="venue">더채플앳 청담 · 6층 채플홀</p>
       </section>
 
       <section className="section greeting">
@@ -64,19 +64,24 @@ export default function Home() {
       <section className="section location">
         <p className="sectionLabel">LOCATION</p>
         <h2>오시는 길</h2>
-        <p className="place"><strong>더채플앳청담</strong><br />서울특별시 강남구 선릉로 757</p>
+        <p className="place"><strong>더채플앳 청담</strong><br />서울특별시 강남구 선릉로 757</p>
+        <div className="venueInfo" aria-label="예식 장소 상세 안내">
+          <div><span>예식</span><strong>2026년 11월 1일 일요일<br />오후 1시</strong></div>
+          <div><span>예식장</span><strong>6층 채플홀</strong></div>
+          <div><span>피로연장</span><strong>5층 피로연장</strong></div>
+        </div>
         <div className="mapPlaceholder">
           <span className="pin">●</span>
-          <strong>더채플앳청담</strong>
-          <small>상세 지도 연동 예정</small>
+          <strong>더채플앳 청담</strong>
+          <small>서울 강남구 선릉로 757</small>
         </div>
-        <a className="primaryButton" href="https://map.naver.com/p/search/%EB%8D%94%EC%B1%84%ED%94%8C%EC%95%B3%EC%B2%AD%EB%8B%B4" target="_blank" rel="noreferrer">
+        <a className="primaryButton" href="https://naver.me/5ne4oSX1" target="_blank" rel="noreferrer">
           네이버 지도에서 보기
         </a>
         <div className="transport">
-          <div><b>지하철</b><p>7호선 강남구청역 3-1번 출구</p></div>
-          <div><b>버스</b><p>강남구청역 정류장 하차</p></div>
-          <div><b>주차</b><p>예식장 주차 안내를 이용해 주세요.</p></div>
+          <div><b>지하철</b><p>7호선·수인분당선 강남구청역에서 이동하실 수 있습니다.</p></div>
+          <div><b>예식장</b><p>도착 후 6층 채플홀로 와주세요.</p></div>
+          <div><b>피로연장</b><p>예식 후 5층 피로연장을 이용해 주세요.</p></div>
         </div>
       </section>
 
