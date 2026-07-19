@@ -12,9 +12,8 @@ export default function Home() {
           이세린 <span>&amp;</span> 이혜린
         </h1>
         <p className="heroDate">2026. 11. 01 · SUN · 1:00 PM</p>
-        <div className="heroArt">
-          <img className="heroImage" src="photos/photo-3.jpg" alt="이세린과 이혜린의 모습" />
-          <div className="heroPhotoCaption" aria-hidden="true">
+        <div className="heroArt" aria-hidden="true">
+          <div className="arch">
             <span>OUR<br />WEDDING DAY</span>
           </div>
         </div>
@@ -49,19 +48,6 @@ export default function Home() {
           ))}
         </div>
         <p className="countdown">우리의 가장 빛나는 날</p>
-      </section>
-
-      <section className="section gallery">
-        <p className="sectionLabel">GALLERY</p>
-        <h2>우리의 순간</h2>
-        <div className="photoGrid">
-          {[1, 2, 3, 4, 5].map(number => (
-            <div key={number} className={`photo photo${number}`}>
-              <img src={`photos/photo-${number}.jpg`} alt={`이세린과 이혜린의 추억 ${number}`} loading="lazy" />
-            </div>
-          ))}
-        </div>
-        <p className="hint">함께한 소중한 순간들</p>
       </section>
 
       <section className="section location">

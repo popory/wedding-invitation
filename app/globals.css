@@ -38,10 +38,9 @@ h2 { margin-bottom: 24px; font-size: 23px; font-weight: 500; letter-spacing: -.0
 h1 { font-size: 30px; font-weight: 500; letter-spacing: -.05em; }
 h1 span { margin: 0 8px; color: var(--rose); font-size: 20px; font-style: italic; }
 .heroDate { color: var(--muted); font: 500 11px Arial, sans-serif; letter-spacing: .17em; }
-.heroArt { position: relative; height: 410px; margin: 36px 0 24px; border-radius: 160px 160px 4px 4px; background: #d9d0c4; overflow: hidden; }
-.heroImage { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 51% center; }
-.heroPhotoCaption { position: absolute; inset: 0; display: grid; place-items: end center; padding-bottom: 28px; background: linear-gradient(180deg, transparent 58%, rgba(35,31,27,.38)); }
-.heroPhotoCaption span { color: rgba(255,255,255,.95); font: 500 11px/1.8 Arial, sans-serif; letter-spacing: .25em; text-shadow: 0 1px 8px rgba(0,0,0,.25); }
+.heroArt { height: 410px; margin: 36px 0 24px; display: grid; place-items: end center; border-radius: 160px 160px 4px 4px; background: linear-gradient(145deg, #d9d0c4, #afa99f); overflow: hidden; }
+.arch { width: 70%; height: 83%; display: grid; place-items: center; border-radius: 150px 150px 0 0; border: 1px solid rgba(255,255,255,.6); background: linear-gradient(155deg, rgba(255,255,255,.35), rgba(126,140,119,.28)); }
+.arch span { color: rgba(255,255,255,.9); font: 500 12px/1.8 Arial, sans-serif; letter-spacing: .25em; }
 .venue { margin: 0; font-size: 15px; letter-spacing: .08em; }
 .greeting { background: var(--paper); }
 .greeting > p:not(.sectionLabel) { color: #5e5851; font-size: 15px; line-height: 2.05; }
@@ -60,15 +59,6 @@ h1 span { margin: 0 8px; color: var(--rose); font-size: 20px; font-style: italic
 .calendar span { height: 28px; display: grid; place-items: center; }
 .weddingDay { border-radius: 50%; background: var(--rose); color: white; box-shadow: 0 3px 10px rgba(183,134,123,.3); }
 .countdown { margin: 0; color: var(--sage); font-size: 13px; }
-.photoGrid { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-areas: "p1 p4" "p2 p2" "p3 p3" "p5 p5"; gap: 8px; }
-.photo { overflow: hidden; background: #c8c0b5; }
-.photo img { width: 100%; height: 100%; display: block; object-fit: cover; }
-.photo1 { grid-area: p1; aspect-ratio: 9 / 16; }
-.photo2 { grid-area: p2; aspect-ratio: 16 / 9; }
-.photo3 { grid-area: p3; aspect-ratio: 16 / 9; }
-.photo4 { grid-area: p4; aspect-ratio: 9 / 16; }
-.photo5 { grid-area: p5; aspect-ratio: 16 / 9; }
-.hint { margin: 18px 0 0; color: var(--muted); font-size: 11px; }
 .location { background: var(--ivory); }
 .place { color: var(--muted); font-size: 13px; line-height: 1.8; }
 .place strong { color: var(--ink); font-size: 16px; font-weight: 500; }
