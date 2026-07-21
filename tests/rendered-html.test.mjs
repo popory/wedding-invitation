@@ -37,6 +37,13 @@ test("청첩장과 방명록 입력 화면을 서버에서 렌더링한다", asy
   assert.match(html, /010-3608-5580/);
   assert.match(html, /tel:01053558310/);
   assert.match(html, /sms:01036085580/);
+  const contactStart = html.indexOf("CONTACT");
+  const contactEnd = html.indexOf("WEDDING DAY", contactStart);
+  const contactHtml = html.slice(contactStart, contactEnd);
+  assert.ok(contactHtml.indexOf("이진웅") < contactHtml.indexOf("전명자"));
+  assert.ok(contactHtml.indexOf("전명자") < contactHtml.indexOf("이세린"));
+  assert.ok(contactHtml.indexOf("이동춘") < contactHtml.indexOf("김옥자"));
+  assert.ok(contactHtml.indexOf("김옥자") < contactHtml.indexOf("이혜린"));
   assert.doesNotMatch(html, /photo-[1-9]\.jpg|GALLERY/);
 });
 

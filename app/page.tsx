@@ -7,17 +7,17 @@ const contactGroups = [
   {
     title: "신랑측",
     contacts: [
-      { role: "신랑", name: "이세린", phone: "01053558310", displayPhone: "010-5355-8310" },
       { role: "아버지", name: "이진웅", phone: "01086458310", displayPhone: "010-8645-8310" },
       { role: "어머니", name: "전명자", phone: "01023305734", displayPhone: "010-2330-5734" },
+      { role: "신랑", name: "이세린", phone: "01053558310", displayPhone: "010-5355-8310" },
     ],
   },
   {
     title: "신부측",
     contacts: [
-      { role: "신부", name: "이혜린", phone: "01025485580", displayPhone: "010-2548-5580" },
-      { role: "어머니", name: "김옥자", phone: "01027865580", displayPhone: "010-2786-5580" },
       { role: "아버지", name: "이동춘", phone: "01036085580", displayPhone: "010-3608-5580" },
+      { role: "어머니", name: "김옥자", phone: "01027865580", displayPhone: "010-2786-5580" },
+      { role: "신부", name: "이혜린", phone: "01025485580", displayPhone: "010-2548-5580" },
     ],
   },
 ];
