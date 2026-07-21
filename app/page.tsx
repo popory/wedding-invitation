@@ -1,4 +1,5 @@
 import { NaverMap } from "./NaverMap";
+import { Guestbook } from "./Guestbook";
 
 const calendarDays = Array.from({ length: 30 }, (_, index) => index + 1);
 
@@ -80,6 +81,8 @@ export default function Home() {
         <details><summary>신랑측 계좌번호</summary><p>계좌 정보를 입력해 주세요.</p></details>
         <details><summary>신부측 계좌번호</summary><p>계좌 정보를 입력해 주세요.</p></details>
       </section>
+
+      <Guestbook />
 
       <footer>
         <div className="botanical" aria-hidden="true">❦</div>

@@ -87,6 +87,29 @@ h1 span { margin: 0 8px; color: var(--rose); font-size: 20px; font-style: italic
 .account details { margin-top: 10px; border: 1px solid var(--line); text-align: left; }
 .account summary { padding: 16px; cursor: pointer; font-size: 13px; list-style-position: inside; }
 .account details p { margin: 0; padding: 0 16px 16px; color: var(--muted); font-size: 12px; }
+.guestbook { background: var(--ivory); }
+.guestbookForm { display: grid; gap: 14px; margin-top: 34px; text-align: left; }
+.guestbookForm label { display: grid; gap: 7px; }
+.guestbookForm label > span { color: var(--sage); font-size: 12px; }
+.guestbookForm input, .guestbookForm textarea, .guestbookDelete input { width: 100%; padding: 13px 14px; border: 1px solid var(--line); border-radius: 3px; outline: none; background: var(--paper); color: var(--ink); font: inherit; font-size: 13px; }
+.guestbookForm input:focus, .guestbookForm textarea:focus, .guestbookDelete input:focus { border-color: var(--sage); box-shadow: 0 0 0 2px rgba(126,140,119,.12); }
+.guestbookForm textarea { resize: vertical; line-height: 1.7; }
+.guestbookForm small { color: var(--muted); font-size: 10px; text-align: right; }
+.guestbookForm > button, .guestbookLink { padding: 15px; border: 0; border-radius: 3px; background: var(--sage); color: white; font: inherit; font-size: 13px; font-weight: 500; text-align: center; text-decoration: none; cursor: pointer; }
+.guestbookForm > button:disabled, .guestbookDelete button:disabled { cursor: wait; opacity: .6; }
+.guestbookLink { display: block; margin-top: 24px; }
+.guestbookStatus { margin: 16px 0 0; color: var(--rose); font-size: 12px; line-height: 1.6; }
+.guestbookList { display: grid; gap: 10px; margin-top: 34px; text-align: left; }
+.guestbookEmpty { margin: 0; padding: 28px 10px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--muted); font-size: 12px; text-align: center; }
+.guestbookEntry { position: relative; padding: 18px; border: 1px solid var(--line); background: var(--paper); }
+.guestbookEntryHead { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; }
+.guestbookEntryHead strong { font-size: 13px; font-weight: 600; }
+.guestbookEntryHead time { color: var(--muted); font: 10px Arial, sans-serif; }
+.guestbookEntry > p { margin: 11px 0 16px; color: #5e5851; font-size: 13px; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
+.guestbookDeleteOpen { display: block; margin-left: auto; padding: 0; border: 0; background: none; color: var(--muted); font-size: 10px; cursor: pointer; }
+.guestbookDelete { display: grid; grid-template-columns: 1fr auto auto; gap: 6px; }
+.guestbookDelete input { padding: 9px 10px; font-size: 11px; }
+.guestbookDelete button { padding: 0 9px; border: 1px solid var(--line); background: var(--ivory); color: var(--muted); font-size: 10px; cursor: pointer; }
 footer { padding: 54px 20px 66px; background: #6f786a; color: white; text-align: center; }
 footer .botanical { color: #dfe4dc; }
 footer p { margin: 8px 0; font-size: 14px; letter-spacing: .12em; }
