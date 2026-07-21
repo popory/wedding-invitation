@@ -33,6 +33,10 @@ test("청첩장과 방명록 입력 화면을 서버에서 렌더링한다", asy
   assert.match(html, /축하의 마음 남기기/);
   assert.match(html, /삭제 비밀번호/);
   assert.match(html, /마음 남기기/);
+  assert.match(html, /010-5355-8310/);
+  assert.match(html, /010-3608-5580/);
+  assert.match(html, /tel:01053558310/);
+  assert.match(html, /sms:01036085580/);
   assert.doesNotMatch(html, /photo-[1-9]\.jpg|GALLERY/);
 });
 

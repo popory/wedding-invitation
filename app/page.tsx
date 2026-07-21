@@ -3,6 +3,25 @@ import { Guestbook } from "./Guestbook";
 
 const calendarDays = Array.from({ length: 30 }, (_, index) => index + 1);
 
+const contactGroups = [
+  {
+    title: "신랑측",
+    contacts: [
+      { role: "신랑", name: "이세린", phone: "01053558310", displayPhone: "010-5355-8310" },
+      { role: "아버지", name: "이진웅", phone: "01086458310", displayPhone: "010-8645-8310" },
+      { role: "어머니", name: "전명자", phone: "01023305734", displayPhone: "010-2330-5734" },
+    ],
+  },
+  {
+    title: "신부측",
+    contacts: [
+      { role: "신부", name: "이혜린", phone: "01025485580", displayPhone: "010-2548-5580" },
+      { role: "어머니", name: "김옥자", phone: "01027865580", displayPhone: "010-2786-5580" },
+      { role: "아버지", name: "이동춘", phone: "01036085580", displayPhone: "010-3608-5580" },
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -35,6 +54,32 @@ export default function Home() {
           <div><small>신랑</small><strong>이세린</strong></div>
           <span className="dot">·</span>
           <div><small>신부</small><strong>이혜린</strong></div>
+        </div>
+      </section>
+
+      <section className="section contactSection">
+        <p className="sectionLabel">CONTACT</p>
+        <h2>연락하기</h2>
+        <p className="subtext">축하의 마음을 전하실 분께 연락해 주세요.</p>
+        <div className="contactGroups">
+          {contactGroups.map((group) => (
+            <div className="contactGroup" key={group.title}>
+              <h3>{group.title}</h3>
+              {group.contacts.map((contact) => (
+                <div className="contactRow" key={contact.phone}>
+                  <div className="contactIdentity">
+                    <span>{contact.role}</span>
+                    <strong>{contact.name}</strong>
+                    <small>{contact.displayPhone}</small>
+                  </div>
+                  <div className="contactActions">
+                    <a href={`tel:${contact.phone}`} aria-label={`${contact.role} ${contact.name}에게 전화하기`}>전화</a>
+                    <a href={`sms:${contact.phone}`} aria-label={`${contact.role} ${contact.name}에게 문자 보내기`}>문자</a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 
